@@ -1,0 +1,199 @@
+<!--
+  #%L
+  GwtMaterial
+  %%
+  Copyright (C) 2015 - 2016 GwtMaterialDesign
+  %%
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+       http://www.apache.org/licenses/LICENSE-2.0
+  
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+#L%
+-->
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:m="urn:import:gwt.material.design.client.ui"
+             xmlns:ma='urn:import:gwt.material.design.addins.client'>
+
+    
+    <ui:style>
+        .panel{
+        background: url("http://static1.squarespace.com/static/51609147e4b0715db61d32b6/521b97cee4b05f031fd12dde/5519e33de4b06a1002802805/1431718693701/?format=1500w");
+        background-size: 100%;
+        padding: 0px !important;
+        padding-top: 10% !important;
+        }
+        .fieldPanel{
+        backgroundcolor: blue;
+        padding: 3%;
+        }
+        .imgProfile{
+        margin-top: -50px;
+        width: 20%;
+        margin-left: 10%;
+        border: 5px solid #fff;
+        }               
+        
+        .label{
+            margin: 24px;
+        }
+        .footer{
+            position: fixed;
+            width: 100%;
+            bottom: 0px;
+            padding-top: 0px !important;
+        }
+        
+    </ui:style>
+    <g:HTMLPanel>
+        <header>
+            <!-- NavBar -->
+            <m:MaterialNavBar activates="sideNav" ui:field="navBar" backgroundColor="blue" type="FIXED">
+                <m:MaterialNavBrand text="Asociación Colaboración y Esfuerzo"/>
+                <m:MaterialNavSection float="RIGHT">
+                    <m:MaterialTooltip text="Starter" position="BOTTOM">
+                        <m:MaterialLink iconType="WHATSHOT" iconPosition="NONE"/>
+                    </m:MaterialTooltip>
+                    <m:MaterialTooltip text="Apps" position="BOTTOM">
+                        <m:MaterialLink iconType="VIEW_MODULE" iconPosition="NONE"/>
+                    </m:MaterialTooltip>
+                    <m:MaterialTooltip text="Notifications" position="BOTTOM">
+                        <m:MaterialLink activates="sideNav" iconType="NOTIFICATIONS" iconPosition="NONE"/>
+                    </m:MaterialTooltip>
+                    <m:MaterialTooltip text="Search" position="BOTTOM">
+                        <m:MaterialLink ui:field="btnSearch" iconType="SEARCH" iconPosition="NONE"/>
+                    </m:MaterialTooltip>
+                </m:MaterialNavSection>
+            </m:MaterialNavBar>
+            
+            <!-- Search Bar -->
+            <m:MaterialNavBar ui:field="navBarSearch" width="100%" backgroundColor="white" visible="false">
+                <m:MaterialSearch ui:field="txtSearch" placeholder="Keyword" backgroundColor="white" iconColor="black" textColor="black" active="true" grid="l3" shadow="1"/>
+            </m:MaterialNavBar>
+            
+            
+            <!-- SideNav -->
+<!--            <m:MaterialSideNav m:id="sideNav" type="CARD" width="240" layoutPosition="FIXED">
+            <m:MaterialRow separator="true" marginBottom="0">
+                <m:MaterialImage marginTop="20" height="auto" url="https://lh3.googleusercontent.com/-Zu_vZFIl9Ms/AAAAAAAAAAI/AAAAAAAAALk/2pPyCa-IKHg/s60-p-rw-no/photo.jpg" grid="l3 m3 s3" circle="true"/>
+                <m:MaterialLabel text="Mark Kevin Baldemor" fontWeight="BOLD"  marginTop="8" grid="l9 m9 s9"/>
+            </m:MaterialRow>
+            <m:MaterialLink iconType="CONTACTS" text="All Contacts" />
+            <m:MaterialLink iconType="PERM_CONTACT_CALENDAR" text="Frequently Contacted" />
+            <m:MaterialLink iconType="GROUP" text="Groups" />
+            <m:MaterialLink iconType="RADIO_BUTTON_CHECKED" text="Circles" />
+            <m:MaterialLink iconType="FIND_IN_PAGE" text="Find Duplicates" />
+            <m:MaterialLink iconType="MORE" text="More" />
+        </m:MaterialSideNav>-->
+        
+            <m:MaterialSideNav width="310" m:id="sideNav" type="PUSH" closeOnClick="false">
+<!--                <m:MaterialCard backgroundColor="white" textColor="">
+                    <m:MaterialCardImage waves="LIGHT">
+                        <m:MaterialImage url="http://thatgrapejuice.net/wp-content/uploads/2013/08/pharrell-williams-that-grape-juice.png"/>
+                    </m:MaterialCardImage>
+
+                    <m:MaterialCardContent backgroundColor="blue-grey darken-3" layoutPosition="RELATIVE" paddingBottom="62">
+                        <m:MaterialAnchorButton ui:field="btnFAB" type="FLOATING" backgroundColor="blue lighten-1" iconType="PLAY_ARROW" size="LARGE" waves="DEFAULT" layoutPosition="ABSOLUTE" right="32" top="-32"/>
+                        <m:MaterialLabel text="Pharell Williams" fontSize="2em"/>
+                        <m:MaterialLabel text="Love Yourself to Dance" fontSize="1.2em"/>
+                    </m:MaterialCardContent>
+
+                    <m:MaterialCardAction backgroundColor="blue-grey" height="88px">
+                        <m:MaterialImage ui:field="imgMusic" grid="l2" width="72px" height="48px" addStyleNames="circle" url="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRi9lfCkLutb7ugJlIjn84qWNoiICopC-Vyx7QQJRHF5E7GlqFG"/>
+                        <m:MaterialLabel ui:field="lblMusic" grid="l8" paddingTop="12" text="Lady Gaga / Telephone" fontSize="1.2em" addStyleNames="truncate"/>
+                    </m:MaterialCardAction>
+                </m:MaterialCard>-->
+                
+                <!--                <m:MaterialRow addStyleNames="card">-->
+                    
+                <m:MaterialPanel shadow="1" addStyleNames="{style.panel}">
+                    <m:MaterialPanel addStyleNames="{style.fieldPanel}">
+                        <m:MaterialImage url="https://material-design.storage.googleapis.com/publish/material_v_8/material_ext_publish/0B5-3BCtasWxEeWh0LVdobC1wS1E/style_icons_product_human_best_do3.png" type="CIRCLE" addStyleNames="{style.imgProfile} z-depth-1"/>
+                        <m:MaterialLabel text="jmrodriguez90" textColor="white"/>
+                        <m:MaterialLink text="jmrodriguez90@correo.ugr.es" activates="dropProfile" iconType="ARROW_DROP_DOWN" iconPosition="RIGHT" textColor="white"/>
+                    </m:MaterialPanel>
+                </m:MaterialPanel>
+                <m:MaterialLink text="Starter" textColor="blue" iconType="WHATSHOT"/>
+                <m:MaterialLink text="Apps" textColor="blue" iconType="VIEW_MODULE"/>
+                <m:MaterialLink text="Notifications" textColor="blue" iconType="NOTIFICATIONS" separator="true"/>
+                <m:MaterialLink text="Navigation" textColor="blue" iconType="NAVIGATION"/>
+                <m:MaterialLink text="Favorite" textColor="blue" iconType="FAVORITE"/>
+            </m:MaterialSideNav>
+            <!--Drop down -->
+            <m:MaterialDropDown activator="dropProfile">
+                <m:MaterialLink text="Administrador" iconType="FACE" fontSize="1em"/>
+                <m:MaterialLink text="Invitado" iconType="CHILD_CARE" fontSize="1em"/>
+                <m:MaterialLink text="Capacitador" iconType="SCHOOL" fontSize="1em"/>
+                <m:MaterialLink text="Alumno" iconType="SENTIMENT_VERY_SATISFIED" fontSize="1em"/>
+            </m:MaterialDropDown>
+        </header>
+        
+        <m:MaterialContainer fontSize="0.8em">
+            <m:MaterialLabel text="Today" textColor="grey" addStyleNames="{style.label}"/>
+            <!-- Collapsible -->
+            <m:MaterialCollapsible type="POPOUT" grid="s12 m6 l8">
+                <m:MaterialCollapsibleItem>
+                    <m:MaterialCollapsibleHeader>
+                        <m:MaterialLink text="Travel" iconType="AIRPLANEMODE_ACTIVE" iconPosition="LEFT" textColor="purple"/>
+                    </m:MaterialCollapsibleHeader>
+                    <m:MaterialCollapsibleBody>
+                        <m:MaterialLabel text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                    </m:MaterialCollapsibleBody>
+                </m:MaterialCollapsibleItem>
+
+                <m:MaterialCollapsibleItem>
+                    <m:MaterialCollapsibleHeader>
+                        <m:MaterialLink text="Social" iconType="GROUP" iconPosition="LEFT" textColor="red"/>
+                    </m:MaterialCollapsibleHeader>
+                    <m:MaterialCollapsibleBody>
+                        <m:MaterialLabel text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                    </m:MaterialCollapsibleBody>
+                </m:MaterialCollapsibleItem>
+
+                <m:MaterialCollapsibleItem>
+                    <m:MaterialCollapsibleHeader>
+                        <m:MaterialLink text="Updates" iconType="FLAG" iconPosition="LEFT" textColor="amber"/>
+                    </m:MaterialCollapsibleHeader>
+                    <m:MaterialCollapsibleBody>
+                        <m:MaterialLabel text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                    </m:MaterialCollapsibleBody>
+                </m:MaterialCollapsibleItem>
+
+                <m:MaterialCollapsibleItem>
+                    <m:MaterialCollapsibleHeader>
+                        <m:MaterialLink text="Purchases" iconType="ADD_SHOPPING_CART" iconPosition="LEFT" textColor="brown"/>
+                    </m:MaterialCollapsibleHeader>
+                    <m:MaterialCollapsibleBody>
+                        <m:MaterialLabel text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                    </m:MaterialCollapsibleBody>
+                </m:MaterialCollapsibleItem>
+
+                <m:MaterialCollapsibleItem>
+                    <m:MaterialCollapsibleHeader>
+                        <m:MaterialLink text="Promos" iconType="LOYALTY" iconPosition="LEFT" textColor="blue"/>
+                    </m:MaterialCollapsibleHeader>
+                    <m:MaterialCollapsibleBody>
+                        <m:MaterialLabel text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                    </m:MaterialCollapsibleBody>
+                </m:MaterialCollapsibleItem>
+
+                <m:MaterialCollapsibleItem>
+                    <m:MaterialCollapsibleHeader>
+                        <m:MaterialLink text="Finance" iconType="INSERT_CHART" iconPosition="LEFT" textColor="green"/>
+                    </m:MaterialCollapsibleHeader>
+                    <m:MaterialCollapsibleBody>
+                        <m:MaterialLabel text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                    </m:MaterialCollapsibleBody>
+                </m:MaterialCollapsibleItem>
+            </m:MaterialCollapsible>
+        </m:MaterialContainer>
+        
+    </g:HTMLPanel>
+</ui:UiBinder>
