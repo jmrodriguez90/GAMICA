@@ -8,8 +8,8 @@ target, declare a new one with the same name in build.xml.
 -->
 
 <!-- Created with GWT4NB -->
-<project name="Gamica_01-gwt" default="-post-compile" basedir="..">
-    <description>Generates Javascript for Gamica_01.</description>
+<project name="Gamica_Release-gwt" default="-post-compile" basedir="..">
+    <description>Generates Javascript for Gamica_Release.</description>
     <property file="./nbproject/gwt.properties"/>
 
     <!--
