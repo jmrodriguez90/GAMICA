@@ -1,0 +1,1 @@
+# GAMICA, Gamificación de capacitaciones
