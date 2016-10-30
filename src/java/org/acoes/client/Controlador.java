@@ -30,24 +30,6 @@ public class Controlador {
         ventana_principal = new Ventana_principal();
         panel_principal.add(ventana_principal);
 
-//        gamificacion_perfil = new Gamificacion_perfil();
-//        panel_principal.add(gamificacion_perfil);
-
     }
-
-//    void VentanaGamificacionPerfilPulsadoPuntuacion(ClickEvent event) {
-//        getService().obtenerDatosGamificacion(id, new AsyncCallback<Gamiacumulacion>() {
-//            @Override
-//            public void onFailure(Throwable caught) {
-//                MaterialToast.fireToast("No se pudo obtener la puntuación del servidor.");
-//            }
-//
-//            @Override
-//            public void onSuccess(Gamiacumulacion result) {
-//                gamificacion_perfil.cargarPuntuacionYMedallas(result);
-//            }
-//        });
-//
-//    }
 
 }
