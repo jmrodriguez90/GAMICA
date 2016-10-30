@@ -1,2 +1,2 @@
-# GAMICA, Gamificación de capacitaciones
+# GAMICA, Gamificación de capacitaciones para ACOES
 
